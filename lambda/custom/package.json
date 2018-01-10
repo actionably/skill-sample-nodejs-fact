@@ -15,6 +15,6 @@
   "license": "Apache-2.0",
   "dependencies": {
     "alexa-sdk": "^1.0.12",
-    "dashbot": "9.4.2"
+    "dashbot": "^9.4.2"
   }
 }
