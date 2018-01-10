@@ -10,7 +10,7 @@
 
 'use strict';
 const Alexa = require('alexa-sdk');
-
+const dashbot = require('dashbot')('REPLACE_WITH_YOUR_DASHBOT_API_KEY').alexa
 //=========================================================================================================================================
 //TODO: The items below this comment need your attention.
 //=========================================================================================================================================
@@ -48,12 +48,12 @@ const data = [
 //Editing anything below this line might break your skill.
 //=========================================================================================================================================
 
-exports.handler = function(event, context, callback) {
-    var alexa = Alexa.handler(event, context);
+exports.handler = dashbot.handler(function(event, context, callback) {
+    const alexa = Alexa.handler(event, context);
     alexa.appId = APP_ID;
     alexa.registerHandlers(handlers);
     alexa.execute();
-};
+});
 
 const handlers = {
     'LaunchRequest': function () {
